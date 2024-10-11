@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beleza Tropical - Musa Paracoccinia</title>
+    <link rel="stylesheet" href="produtos-detalhados.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar Principal -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Beleza Tropical" width="150">
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquisar plantas...">
+            <button onclick="search()">Pesquisar</button>
+        </div>
+        <div class="cart">
+            <button onclick="toggleCart()">
+                🛒 Carrinho
+                <span id="cart-count" class="cart-count">0</span>
+            </button>
+        </div>
+        <div class="auth">
+            <ul>
+                <li><a href="login.html" class="btn-auth">Login</a></li>
+                <li><a href="cadastro.html" class="btn-auth">Cadastro</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navbar Secundária -->
+    <nav class="navbar-secondary">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="index.html">Sobre Nós</a></li>
+            <li><a href="index.html">Nossos Serviços</a></li>
+            <li><a href="Contatos.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Modal do Carrinho -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Itens do Carrinho</h2>
+            <div id="cart-items">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+            <button class="btn-checkout">Finalizar Compra</button>
+        </div>
+    </div>
+        <!-- Seção de Destaques de Produtos -->
+        <section class="featured-products">
+            <h1>Musa Paracoccinia</h1>
+            <div class="product-details">
+                <div class="product-image">
+                    <img src="images/Produto6.jpg" alt="Musa Paracoccinia">
+                </div>
+                <div class="product-info">
+                    <ul>
+                        <li><span>Nome científico:</span> Musa Paracoccinia</li>
+                        <li><span>Descrição:</span> Planta herbácea perene, com folhas grandes e vistosas, conhecida como bananeira ornamental.</li>
+                        <li><span>Folhagem:</span> Folhas longas, verdes e brilhantes, com uma textura robusta.</li>
+                        <li><span>Flores:</span> Flores pequenas, agrupadas em inflorescências, geralmente de coloração amarela.</li>
+                        <li><span>Frutos:</span> Frutos comestíveis, mas de tamanho pequeno, geralmente não comercializados.</li>
+                        <li><span>Luz:</span> Prefere luz indireta e pode tolerar sombra parcial.</li>
+                        <li><span>Solo:</span> Solo fértil, bem drenado e rico em matéria orgânica.</li>
+                        <li><span>Clima:</span> Clima tropical e subtropical, ideal entre 20°C a 30°C.</li>
+                        <li><span>Utilizações:</span> Usada como planta ornamental em jardins e paisagismo, além de frutífera em algumas regiões.</li>
+                    </ul>
+                    <div class="purchase-info">
+                        <p><strong>Preço: </strong>Arranjo; R$500,00 / Buquê; R$250,00</p>
+                        <p><strong>Economia de: </strong>R$ 10,50 (15%)</p>
+                        <p><strong>Em estoque: </strong>Entrega GRÁTIS, Segunda-feira, 14 de Outubro.</p>
+    
+                        <!-- Botões de seleção Arranjo e Buquê -->
+                        <div class="option-buttons">
+                            <label class="option-button">
+                                <input type="radio" name="productOption" value="arranjo" onclick="selectOption('Arranjo')">
+                                <span>Arranjo</span>
+                            </label>
+    
+                            <label class="option-button">
+                                <input type="radio" name="productOption" value="buque" onclick="selectOption('Buquê')">
+                                <span>Buquê</span>
+                            </label>
+                        </div>
+    
+                        <!-- Botões de Adicionar ao Carrinho e Comprar -->
+                        <button class="btn-add-cart" disabled>Adicionar ao Carrinho</button>
+                        <a href="finalizar.html">
+                            <button class="btn-add-cart">Comprar agora</button>
+                        </a>      
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    
+    </html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beleza Tropical - Alpinia Rosa</title>
+    <link rel="stylesheet" href="produtos-detalhados.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar Principal -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Beleza Tropical" width="150">
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquisar plantas...">
+            <button onclick="search()">Pesquisar</button>
+        </div>
+        <div class="cart">
+            <button onclick="toggleCart()">
+                🛒 Carrinho
+                <span id="cart-count" class="cart-count">0</span>
+            </button>
+        </div>
+        <div class="auth">
+            <ul>
+                <li><a href="login.html" class="btn-auth">Login</a></li>
+                <li><a href="cadastro.html" class="btn-auth">Cadastro</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Navbar Secundária -->
+    <nav class="navbar-secondary">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="index.html">Sobre Nós</a></li>
+            <li><a href="index.html">Nossos Serviços</a></li>
+            <li><a href="Contatos.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Modal do Carrinho -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Itens do Carrinho</h2>
+            <div id="cart-items">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+            <button class="btn-checkout">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Seção de Destaques - Alpinia Rosa -->
+    <section class="featured-products">
+        <h1>Alpinia Rosa</h1>
+        <div class="product-details">
+            <!-- Imagem da Planta -->
+            <div class="product-image">
+                <img src="images/produto2.jpg" alt="Alpinia Rosa">
+            </div>
+            <!-- Informações da Planta -->
+            <div class="product-info">
+               
+                <ul>
+                    <li><span>Nome Científico:</span> Alpinia purpurata</li>
+                    <li><span>Origem:</span> Ásia tropical</li>
+                    <li><span>Porte:</span> Pode atingir até 2 metros de altura</li>
+                    <li><span>Ambiente:</span> Cultivada em regiões de clima tropical e subtropical</li>
+                    <li><span>Flores:</span> Inflorescências alongadas com brácteas rosa vibrante</li>
+                    <li><span>Luz:</span> Prefere meia-sombra, mas tolera luz solar indireta</li>
+                    <li><span>Solo:</span> Rico em matéria orgânica e bem drenado</li>
+                    <li><span>Uso:</span> Ornamental, ideal para jardins tropicais e arranjos florais</li>
+                </ul>
+                <div class="purchase-info">
+                    <p><strong>Preço: </strong>Arranjo; R$350.00 / Buquê; R$150,00</p>
+                    <p><strong>Economia de: </strong>R$ 10,50 (15%)</p>
+                    <p><strong>Em estoque: </strong>Entrega GRÁTIS, Segunda-feira, 14 de Outubro.</p>
+
+                    <!-- Botões de seleção Arranjo e Buquê -->
+                    <div class="option-buttons">
+                        <label class="option-button">
+                            <input type="radio" name="productOption" value="arranjo" onclick="selectOption('Arranjo')">
+                            <span>Arranjo</span>
+                        </label>
+
+                        <label class="option-button">
+                            <input type="radio" name="productOption" value="buque" onclick="selectOption('Buquê')">
+                            <span>Buquê</span>
+                        </label>
+                    </div>
+
+                    <!-- Botões de Adicionar ao Carrinho e Comprar -->
+                    <button class="btn-add-cart" disabled>Adicionar ao Carrinho</button>
+                    <a href="finalizar.html">
+                        <button class="btn-add-cart">Comprar agora</button>
+                    </a>      
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

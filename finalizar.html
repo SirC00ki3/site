@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beleza Tropical</title>
+    <link rel="stylesheet" href="finalizar.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Navbar Principal -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Beleza Tropical" width="150">
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquisar plantas...">
+            <button onclick="search()">Pesquisar</button>
+        </div>
+        <div class="cart">
+            <button onclick="toggleCart()">
+                🛒 Carrinho 
+                <span id="cart-count" class="cart-count">0</span>
+            </button>
+        </div>
+        <div class="auth">
+            <li><a href="login.html" class="btn-auth">Login</a></li>
+            <li><a href="cadastro.html" class="btn-auth">Cadastro</a></li>
+        </div>
+    </nav>
+
+    <!-- Navbar Secundária -->
+    <nav class="navbar-secondary">
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="#sobre-nos">Sobre Nós</a></li>
+            <li><a href="#servicos">Nossos Serviços</a></li>
+            <li><a href="Contatos.html">Contato</a></li>
+            <li><a href="finalizar-compra.html">Finalizar Compra</a></li> <!-- Link para a página de finalização -->
+        </ul>
+    </nav>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal" style="display: none;">
+        <div class="cart-modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Itens do Carrinho</h2>
+            <div id="cart-items">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+            <button class="btn-checkout" onclick="location.href='finalizar-compra.html'">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Página de Finalização de Compra -->
+    <h2>Finalizar Compra</h2>
+    <div class="checkout-form">
+        <form id="purchaseForm" onsubmit="submitPurchase(event)">
+            <label for="name">Nome Completo:</label>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+
+            <label for="address">Endereço de Entrega:</label>
+            <input type="text" id="address" name="address" placeholder="Digite seu endereço" required>
+
+            <label for="payment-method">Método de Pagamento:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Cartão de Crédito</option>
+                <option value="boleto">Boleto Bancário</option>
+                <option value="pix">PIX</option>
+            </select>
+
+            <button type="submit">Confirmar Compra</button>
+        </form>
+    </div>
+
+    <script>
+        // Função para abrir/fechar o carrinho
+        function toggleCart() {
+            var cartModal = document.getElementById('cartModal');
+            cartModal.style.display = cartModal.style.display === "none" || cartModal.style.display === "" ? "flex" : "none";
+        }
+
+        // Função para simular a submissão da compra
+        function submitPurchase(event) {
+            event.preventDefault(); // Impede a submissão do formulário para processamento simulado
+            var name = document.getElementById('name').value;
+            var address = document.getElementById('address').value;
+            var paymentMethod = document.getElementById('payment-method').value;
+
+            alert("Compra realizada com sucesso!\nNome: " + name + "\nEndereço: " + address + "\nMétodo de Pagamento: " + paymentMethod);
+            document.getElementById("purchaseForm").reset(); // Limpa o formulário após a compra
+        }
+    </script>
+
+</body>
+</html>

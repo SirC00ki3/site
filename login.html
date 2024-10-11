@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Beleza Tropical</title>
+    <link rel="stylesheet" href="StyleL.css">
+</head>
+<body>
+     <!-- Navbar Principal -->
+     <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Beleza Tropical" width="150">
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquisar plantas...">
+            <button onclick="search()">Pesquisar</button>
+        </div>
+        <div class="cart">
+            <button onclick="toggleCart()">
+                🛒 Carrinho 
+                <span id="cart-count" class="cart-count">0</span>
+            </button>
+        </div>
+        <div class="auth">
+            <li><a href="login.html" class="btn-auth">Login</a></li>
+            <li><a href="cadastro.html" class="btn-auth">Cadastro</a></li>
+        </div>
+    </nav>
+
+    <!-- Navbar Secundária -->
+    <nav class="navbar-secondary">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="index.html">Sobre Nós</a></li>
+            <li><a href="index.html">Nossos Serviços</a></li>
+            <li><a href="Contatos.html">Contato</a></li>
+        </ul>
+    </nav>
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Itens do Carrinho</h2>
+            <div id="cart-items">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+            <button class="btn-checkout">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+        <p>Caso seja Administrador; <a href="admin-login.html">Entrar como Administrador</a></p>
+    </form>
+    </div>
+        <!-- Rodapé -->
+        <footer>
+            <p>&copy; 2024 Beleza Tropical. Todos os direitos reservados.</p>
+        </footer>
+</body>
+</html>

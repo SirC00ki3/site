@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os Produtos - Beleza Tropical</title>
+    <link rel="stylesheet" href="produtos.css">
+</head>
+<body>
+     <!-- Navbar Principal -->
+     <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Beleza Tropical" width="150">
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquisar plantas...">
+            <button onclick="search()">Pesquisar</button>
+        </div>
+        <div class="cart">
+            <button onclick="toggleCart()">
+                🛒 Carrinho 
+                <span id="cart-count" class="cart-count">0</span>
+            </button>
+        </div>
+        <div class="auth">
+            <li><a href="login.html" class="btn-auth">Login</a></li>
+            <li><a href="cadastro.html" class="btn-auth">Cadastro</a></li>
+        </div>
+    </nav>
+
+    <!-- Navbar Secundária -->
+    <nav class="navbar-secondary">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="index.html">Sobre Nós</a></li>
+            <li><a href="index.html">Nossos Serviços</a></li>
+            <li><a href="Contatos.html">Contato</a></li>
+        </ul>
+    </nav>
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Itens do Carrinho</h2>
+            <div id="cart-items">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+            <button class="btn-checkout">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <section>
+        <section id="produtos" class="produtos"></section>
+        <h2>Todos os Produtos</h2>
+        <div class="produtos-grid">
+            <div class="produto">
+                <img src="images/produto1.jpg" alt="Alpinia Branca" class="produto-img">
+                <h3>Alpinia Branca</h3>
+                <p class="preco">R$ 40,00</p>
+                <a href="produto1.html" class="btn">Visualizar</a>
+            </div>
+            <div class="produto">
+                <img src="images/produto2.jpg" alt="Alpinia Rosa" class="produto-img">
+                <h3>Alpinia Rosa</h3>
+                <p class="preco">R$45,00</p>
+                <a href="Produto2.html" class="btn">Visualizar</a>
+            </div>
+            <div class="produto">
+                <img src="images/produto3.jpg" alt="Bastão Dalla" class="produto-img">
+                <h3>Bastão Dalla</h3>
+                <p class="preco">R$190,00</p>
+                <a href="Produto3.html" class="btn">Visualizar</a>
+            </div>
+            <div class="produto">
+                <img src="images/produto4.jpg" alt="Antúrio Chocolate" class="produto-img">
+                <h3>Antúrio Chocolate</h3>
+                <p class="preco">R$39,00</p>
+                <a href="Produto4.html" class="btn">Visualizar</a>
+            </div>
+            <div class="produto">
+                <img src="images/Produto5.jpg" alt="Antúria Previa" class="produto-img">
+                <h3>Antúria Previa</h3>
+                <p class="preco">R$39,00</p>
+                <a href="Produto5.html" class="btn">Visualizar</a>
+            </div>
+            <div class="produto">
+                <img src="images/Produto6.jpg" alt="Musa Paracoccinia" class="produto-img">
+                <h3>Musa Paracoccinia</h3>
+                <p class="preco">R$50,00</p>
+                <a href="Produto6.html" class="btn">Visualizar</a>
+            </div>
+            <div class="produto">
+                <img src="images/Produto7.jpg" alt="Nickeriensis" class="produto-img">
+                <h3>Nickeriensis</h3>
+                <p class="preco">R$40,00</p>
+                <a href="Produto7.html" class="btn">Visualizar</a>
+            </div>
+            <div class="produto">
+                <img src="images/Produto8.jpg" alt="Mocara Azul" class="produto-img">
+                <h3>Mocara Azul</h3>
+                <p class="preco">R$35,00</p>
+                <a href="Produto8.html" class="btn">Visualizar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Beleza Tropical. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

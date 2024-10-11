@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beleza Tropical</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+     <!-- Navbar Principal -->
+     <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Beleza Tropical" width="150">
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquisar plantas...">
+            <button onclick="search()">Pesquisar</button>
+        </div>
+        <div class="cart">
+            <button onclick="toggleCart()">
+                🛒 Carrinho 
+                <span id="cart-count" class="cart-count">0</span>
+            </button>
+        </div>
+        <div class="auth">
+            <li><a href="login.html" class="btn-auth">Login</a></li>
+            <li><a href="cadastro.html" class="btn-auth">Cadastro</a></li>
+        </div>
+    </nav>
+
+    <!-- Navbar Secundária -->
+    <nav class="navbar-secondary">
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="#sobre-nos">Sobre Nós</a></li>
+            <li><a href="#servicos">Nossos Serviços</a></li>
+            <li><a href="Contatos.html">Contato</a></li>
+        </ul>
+    </nav>
+<!-- Cart Modal -->
+<div id="cartModal" class="cart-modal">
+    <div class="cart-modal-content">
+        <span class="close" onclick="toggleCart()">&times;</span>
+        <h2>Itens do Carrinho</h2>
+        <div id="cart-items">
+            <p>Seu carrinho está vazio.</p>
+        </div>
+        <a href="finalizar.html">
+            <button class="btn-checkout">Finalizar Compra</button>
+        </a>        
+    </div>
+</div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Bem-vindo à Beleza Tropical</h1>
+            <p>Descubra plantas tropicais raras e exóticas para todas as suas necessidades.</p>
+            <a href="#mais-vendidos" class="btn">Mais Vendidos</a>
+        </div>
+    </section>      
+
+    <!-- Seção de Produtos -->
+<section class="produtos" id="mais-vendidos">
+    <h2>Mais Vendidos</h2>  
+    <div class="produtos-grid">
+        <div class="produto">
+            <img src="images/produto1.jpg" alt="Buquê de Alpinia Branca" class="produto-img">
+            <h3>Buquê de Alpinia Branca</h3>
+            <p class="preco">R$140,00</p>
+            <a href="#" class="btn-adicionar" onclick="addToCart('Buquê de Alpinia Branca', 140.00); return false;">Adicionar ao Carrinho</a>
+        </div>
+        </div>
+        <div class="produto">
+            <img src="images/produto2.jpg" alt="Buquê de Alpinia Rosa" class="produto-img">
+            <h3>Buquê de Alpinia Rosa</h3>
+            <p class="preco">R$150,00</p>
+            <a href="#" class="btn-adicionar" onclick="addToCart('Buquê de Alpinia Rosa', 150.00); return false;">Adicionar ao Carrinho</a>
+        </div>
+        <div class="produto">
+            <img src="images/produto3.jpg" alt="Arranjo de Bastão Dalla" class="produto-img">
+            <h3>Arranjo de Bastão Dalla</h3>
+            <p class="preco">R$2.000,00</p>
+            <a href="#" class="btn-adicionar" onclick="addToCart('Arranjo de Bastão Dalla', 2000); return false;">Adicionar ao Carrinho</a>
+        </div>
+    </div>
+
+    <!-- Nossos Serviços Section -->
+    <section id="servicos" class="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="servicos-container">
+            <div class="servico">
+                <h3>Consultoria para Plantio</h3>
+                <p>Oferecemos orientação especializada para escolher e plantar as melhores espécies para o seu ambiente.</p>
+            </div>
+            <div class="servico">
+                <h3>Manutenção de Jardins</h3>
+                <p>Serviços de manutenção periódica para garantir que seu jardim esteja sempre bonito e saudável.</p>
+            </div>
+            <div class="servico">
+                <h3>Casamentos e Eventos</h3>
+                <p>Transforme seus momentos especiais em memórias inesquecíveis!</p>
+            </div>
+        </div>
+    </section>
+    <!-- Sobre Nós Section -->
+    <section id="sobre-nos" class="sobre-nos">
+        <h2>Sobre Nós</h2>
+        <div class="sobre-nos-container">
+            <div class="imagem-sobre-nos">
+                <img src="images/imagem-sobre-nos.jpg" alt="Nossa loja de plantas tropicais">
+            </div>
+            <div class="texto-sobre-nos">
+                <h3>Nossa História</h3>
+                <p>Desde nossa criação, buscamos oferecer uma seleção cuidadosa de plantas que refletem a biodiversidade única das regiões tropicais. Cada planta é escolhida com carinho para transformar qualquer ambiente em um refúgio de beleza natural.</p>
+
+                <h3>Missão e Valores</h3>
+                <p>Nosso compromisso é com a qualidade e a sustentabilidade. Trabalhamos com produtores locais para garantir que cada planta seja cultivada de forma responsável, respeitando a natureza e preservando a biodiversidade.</p>
+
+                <h3>Por que escolher a Beleza Tropical?</h3>
+                <ul>
+                    <li>Variedade exclusiva de plantas tropicais raras</li>
+                    <li>Suporte especializado para cuidar de suas plantas</li>
+                    <li>Produtos ecologicamente responsáveis e de alta qualidade</li>
+                    <li>Entrega rápida e segura em todo o Brasil</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Botão Flutuante -->
+    <a href="#home" class="btn-flutuante">Topo</a>
+    
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Beleza Tropical. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
